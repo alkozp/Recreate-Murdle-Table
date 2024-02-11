@@ -203,7 +203,7 @@ footer a:hover {
     background: gainsboro;
 }
 
-.info-modal p, .info-modal ul, .info-modal li {
+.info-modal p, .info-modal ul, .info-modal li, .info-modal pre {
     text-align:justify;
     font-size: 1.2rem;
 }
