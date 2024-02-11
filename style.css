@@ -1,0 +1,281 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#table {
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr 3fr;
+    max-width: 31rem;
+    margin: 3rem auto;
+    text-align: center;
+    -webkit-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.inner-table, .info-table{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* border: 2px solid black; */
+    grid-template-areas: "header, header, header";
+}
+
+.inner-table {
+    border: 1px solid black; 
+}
+
+.info-text {
+    grid-area: 1/1/1/4;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+    color: gray;
+}
+
+.info-table {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    /* border-bottom: 1px solid black; */
+}
+
+.info-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* border-right: 1px solid black; */
+}
+
+.info-row-caption {
+    position: absolute;
+    transform: rotate(-90deg) translate(-104px, -23px);
+    color: gray;
+    height: 1rem;
+    width: 1rem;
+}
+
+.info-row-icons {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.info-row-icons div {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+div {
+    /* border: 1px solid black; */
+}
+
+.game-cell {
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    padding: 0.5rem;
+    border: 1px solid rgb(96, 96, 96);
+    cursor: pointer;
+}
+
+.empty-cell {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}
+
+.table-bottom-left-border {
+    border-bottom: 3px solid black;
+    border-left: 3px solid black;
+}
+
+.table-top-right-border {
+    border-right: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.table-top-border {
+    border-top: 3px solid black;
+}
+
+.table-top-left-border {
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.table-left-border {
+    border-left: 3px solid black;
+}
+
+#special-table {
+    display: flex;
+    width: 8rem;
+    font-size: 1rem;
+}
+
+#special-table img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.special-buttons {
+    padding: 1rem 0 0 1rem;
+}
+
+.special-buttons div {
+    padding-bottom: 0.5rem;
+}
+
+.emoji {
+    cursor: pointer;
+}
+
+.emoji-color-off {
+    color: transparent;
+    text-shadow: 0 0 0 darkolivegreen;
+}
+
+h3>span {
+    color:brown;
+}
+
+
+/* clues */
+
+.clues-cell, .accusation-cell {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.clues-cell:hover, .accusation-cell:hover {
+    background-color:rgb(244, 244, 244);
+}
+
+.clues-cell span, .accusation-cell span {
+    font-size: 2.7rem;
+}
+
+/* footer styles */
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer span {
+    font-weight: bold;
+    color:red;
+}
+
+footer a {
+    color:black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: darkgray;
+    text-underline-offset: 0.5rem;
+}
+
+/* modal styles */
+
+.info-modal {
+    padding: 1rem;
+    max-width: 30rem;
+    max-height: 90svh;
+}
+
+.icon-modal {
+    font-size: 7rem;
+}
+
+.close-modal-info, .close-modal-meme, .close-modal-clues, .close-modal-accusation {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+}
+
+.info-modal::backdrop, .meme::backdrop, .clues-modal::backdrop, .accusation-modal::backdrop {
+    background: gainsboro;
+}
+
+.info-modal p, .info-modal ul, .info-modal li {
+    text-align:justify;
+    font-size: 1.2rem;
+}
+
+.meme, .info-modal, .clues-modal, .accusation-modal {
+    text-align: center;
+    border-radius: 1rem;
+    max-width: 30rem;
+}
+
+.meme img {
+    height: 70svh;
+    display: block;
+}
+
+
+.accusation-modal {
+    min-height: 50svh;
+}
+
+.accusation-modal form {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 1px solid rgb(202, 202, 202)
+}
+
+.accusation-modal label {
+    padding-bottom: 0.5rem;
+    text-align: left;
+}
+
+.accusation-modal select {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#accusation-list {
+    flex-flow: column;
+    display: flex;
+
+}
+
+#check-accusation {
+    padding: 1rem;
+}
+
+#answer {
+    visibility: hidden;
+    height: 0;
+}
+
+.accusation-list summary {
+    text-align: left;
+}
+
+.answer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.score-header {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.score-header span {
+    font-size: 3rem;
+    color: green;
+}
+
+.mark {
+    text-align: center;
+}

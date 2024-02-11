@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recreate Murdle Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Who broke our team project?</h1>
+        <h3>Teaser: <span>" they always claim that it broke itself... "</span></h3>
+        <h4>... but instead of the project everyone sees a blank page ...</h4>
+    </header>
+    <div id="table">
+        <!-- columns header -->
+        <div><!-- empty cell --></div>
+        <div class="info-table"></div>
+        <div class="info-table"></div>
+        <div class="info-table"></div>
+        <!-- row 1 -->
+        <!-- row header -->
+        <div class="info-row"></div>
+        <!-- 3 tables -->
+        <div class="inner-table table-top-left-border"></div>
+        <div class="inner-table table-top-border"></div>
+        <div class="inner-table table-top-right-border"></div>
+        <!-- row 2 -->
+        <!-- row header -->
+        <div class="info-row"></div>
+        <!-- 2 tables -->
+        <div class="inner-table table-left-border"></div>
+        <div class="inner-table"></div>
+        <div class="empty-cell accusation-cell">
+            <!-- empty cell -->
+            <!-- accusation  cell -->
+            <span>👨‍⚖️</span>
+            <div>Your accusation</div>
+        </div>
+        <!-- row 3 -->
+        <!-- row header -->
+        <div class="info-row"></div>
+        <!-- 1 table -->
+        <div class="inner-table table-bottom-left-border"></div>
+        <div class="empty-cell clues-cell">
+            <!-- empty cell -->
+            <span>📋</span>
+            <div>Clues &amp; evidence list</div>
+        </div>
+        <!-- special table -->
+        <div id="special-table">
+            <div><a href="https://murdle.com/book/" target="_blank"><img src="https://murdle.com/book/cover.jpeg" alt="Murdle book"></a></div>
+            <div class="special-buttons">
+                <div id="clear-table" class="emoji" title="reset layout">🗑️</div>
+                <div id="load-state" class="emoji" title="load saved layout">♻️</div>
+                <div id="save-state" class="emoji" title="save current layout">💾</div>
+                <div id="color-toggle" class="emoji" title="turn on/off the light">💡</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modals -->
+    <dialog class="info-modal">
+        <div class="modal-content"></div>
+        <button class="close-modal-info">Close</button>
+    </dialog>
+
+    <!-- meme modal -->
+    <dialog class="meme">
+        <img src="meme.jpg" alt="Joke about working projects">
+        <button class="close-modal-meme">Close</button>
+    </dialog>
+
+    <!-- clues and evidence modal -->
+    <dialog class="clues-modal">
+        <div>clues and evidence list</div>
+        <button class="close-modal-clues">Close</button>
+    </dialog>
+
+   <!-- accusation modal -->
+   <dialog class="accusation-modal">
+        <h2>Your accusation</h2>
+        <form>
+            <div id="accusation-list"></div>
+            <input type="button" id="check-accusation" name="check" value="Check you accusation">
+        </form>
+        <!-- <div id="answer">
+            <details>
+                <summary>suspect (WHO?)</summary>
+                <p>suspect 1</p>
+            </details>
+            <details>
+                <summary>weapon (HOW?)</summary>
+                <p>weapon 2</p>
+            </details>
+            <details>
+                <summary>location (WHERE?)</summary>
+                <p>location 3</p>
+            </details>
+            <details>
+                <summary>motive (WHY?)</summary>
+                <p>motive 1</p>
+            </details>
+        </div> -->
+        <button class="close-modal-accusation">Close</button>
+    </dialog>
+    
+    <!-- footer -->
+    <footer>
+        <a href="#" id="modal-meme">meme here...</a> 🕵️
+        <a href="https://intechgration.io" target="_blank">in<span>tech</span>gration 2024</a>
+    </footer>
+    <script src="script.js" type="module"></script>
+</body>
+</html>
