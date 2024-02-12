@@ -76,7 +76,7 @@ const iconList = [
         `
     },
     {
-        name: 'JS script',
+        name: 'JavaScript',
         type: 'location',
         icon: '⛩️',
         modalText: `<p>a powerful language with many strange paradigms and solutions. It has something to surprise even an experienced developer.</p>
